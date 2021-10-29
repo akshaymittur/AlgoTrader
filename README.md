@@ -1,5 +1,12 @@
-# sdoosa-algo-trade-python
+# AlgoTrader
 
-This project is mainly for newbies into algo trading who are interested in learning to code their own trading algo using python interpreter.
+## Akshay Mittur, Abhiram G, Kenish R, Krishnaprasad V
 
-This is in the context of Indian stock exchanges and brokers.
+BMSCE Final Year Project
+
+## To Do:
+
+- Make UI Cleaner
+- Format Output & Add Buttons
+- Make it User Friendly
+- Remove F&O
