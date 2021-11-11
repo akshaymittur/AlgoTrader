@@ -12,3 +12,4 @@ BMSCE Final Year Project
 - Remove F&O
 - Add Functionality for ChartInk Screener
 - Create csv File for Storing Day Trades
+- Add Functionality to Set Capital to be Traded
