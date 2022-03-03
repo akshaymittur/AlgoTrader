@@ -14,3 +14,18 @@
 2021-10-30 12:54:23: ==> ZerodhaLogin .args => ImmutableMultiDict([])
 2021-10-30 12:54:23: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
 2021-10-30 12:54:23: 127.0.0.1 - - [30/Oct/2021 12:54:23] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-01-10 09:46:05: serverConfig => {'port': 8080, 'enableSSL': False, 'sslPort': 8443, 'deployDir': 'D:/Coding/AlgoTrader', 'logFileDir': 'D:/Coding/AlgoTrader/logs'}
+2022-01-10 09:46:05: brokerAppConfig => {'broker': 'zerodha', 'clientID': 'dummy', 'appKey': 'dummy', 'appSecret': 'dummy', 'redirectUrl': 'http://localhost:8080/apis/broker/login/zerodha'}
+2022-01-10 09:46:05:  * Restarting with stat
+2022-01-10 09:46:06: serverConfig => {'port': 8080, 'enableSSL': False, 'sslPort': 8443, 'deployDir': 'D:/Coding/AlgoTrader', 'logFileDir': 'D:/Coding/AlgoTrader/logs'}
+2022-01-10 09:46:06: brokerAppConfig => {'broker': 'zerodha', 'clientID': 'dummy', 'appKey': 'dummy', 'appSecret': 'dummy', 'redirectUrl': 'http://localhost:8080/apis/broker/login/zerodha'}
+2022-01-10 09:46:06:  * Debugger is active!
+2022-01-10 09:46:06:  * Debugger PIN: 445-292-291
+2022-01-10 09:46:06:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2022-01-10 09:46:56: 127.0.0.1 - - [10/Jan/2022 09:46:56] "GET / HTTP/1.1" 200 -
+2022-01-10 09:46:57: 127.0.0.1 - - [10/Jan/2022 09:46:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-01-10 09:46:59: 127.0.0.1 - - [10/Jan/2022 09:46:59] "[33mGET /apis/broker/login/zerodha HTTP/1.1[0m" 404 -
+2022-01-10 09:47:58: 127.0.0.1 - - [10/Jan/2022 09:47:58] "GET / HTTP/1.1" 200 -
+2022-01-10 09:48:08: 127.0.0.1 - - [10/Jan/2022 09:48:08] "GET / HTTP/1.1" 200 -
+2022-01-10 09:48:14: 127.0.0.1 - - [10/Jan/2022 09:48:14] "[33mGET /apis/broker/login/zerodha HTTP/1.1[0m" 404 -
+2022-01-10 09:48:17: 127.0.0.1 - - [10/Jan/2022 09:48:17] "[33mGET /apis/broker/login/zerodha HTTP/1.1[0m" 404 -
