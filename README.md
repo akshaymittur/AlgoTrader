@@ -8,8 +8,6 @@ BMSCE Final Year Project
 
 - Make UI Cleaner
 - Format Output & Add Buttons
-- Make it User Friendly
-- Remove F&O
 - Add Functionality for ChartInk Screener
 - Create csv File for Storing Day Trades
 - Add Functionality to Set Capital to be Traded
