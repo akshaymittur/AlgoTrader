@@ -14,3 +14,218 @@
 2021-10-30 12:54:23: ==> ZerodhaLogin .args => ImmutableMultiDict([])
 2021-10-30 12:54:23: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
 2021-10-30 12:54:23: 127.0.0.1 - - [30/Oct/2021 12:54:23] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 11:32:21: serverConfig => {'port': 8080, 'enableSSL': False, 'sslPort': 8443, 'deployDir': '/Users/kenishr/Desktop/AlgoTrader', 'logFileDir': '/Users/kenishr/Desktop/AlgoTrader/logs'}
+2022-03-03 11:32:21: brokerAppConfig => {'broker': 'zerodha', 'clientID': 'dummy', 'appKey': 'dummy', 'appSecret': 'dummy', 'redirectUrl': 'http://localhost:8080/apis/broker/login/zerodha'}
+2022-03-03 11:32:21:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2022-03-03 11:32:21:  * Restarting with stat
+2022-03-03 11:32:22: serverConfig => {'port': 8080, 'enableSSL': False, 'sslPort': 8443, 'deployDir': '/Users/kenishr/Desktop/AlgoTrader', 'logFileDir': '/Users/kenishr/Desktop/AlgoTrader/logs'}
+2022-03-03 11:32:22: brokerAppConfig => {'broker': 'zerodha', 'clientID': 'dummy', 'appKey': 'dummy', 'appSecret': 'dummy', 'redirectUrl': 'http://localhost:8080/apis/broker/login/zerodha'}
+2022-03-03 11:32:22:  * Debugger is active!
+2022-03-03 11:32:22:  * Debugger PIN: 101-361-078
+2022-03-03 11:32:56: 127.0.0.1 - - [03/Mar/2022 11:32:56] "GET / HTTP/1.1" 200 -
+2022-03-03 11:32:57: 127.0.0.1 - - [03/Mar/2022 11:32:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-03-03 12:19:29: 127.0.0.1 - - [03/Mar/2022 12:19:29] "GET / HTTP/1.1" 200 -
+2022-03-03 12:21:07: 127.0.0.1 - - [03/Mar/2022 12:21:07] "GET / HTTP/1.1" 200 -
+2022-03-03 12:21:07: 127.0.0.1 - - [03/Mar/2022 12:21:07] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:22:45: 127.0.0.1 - - [03/Mar/2022 12:22:45] "GET / HTTP/1.1" 200 -
+2022-03-03 12:22:45: 127.0.0.1 - - [03/Mar/2022 12:22:45] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:25:36: 127.0.0.1 - - [03/Mar/2022 12:25:36] "GET / HTTP/1.1" 200 -
+2022-03-03 12:25:36: 127.0.0.1 - - [03/Mar/2022 12:25:36] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:25:39: 127.0.0.1 - - [03/Mar/2022 12:25:39] "GET / HTTP/1.1" 200 -
+2022-03-03 12:25:39: 127.0.0.1 - - [03/Mar/2022 12:25:39] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:26:59: 127.0.0.1 - - [03/Mar/2022 12:26:59] "GET / HTTP/1.1" 200 -
+2022-03-03 12:27:52: 127.0.0.1 - - [03/Mar/2022 12:27:52] "GET / HTTP/1.1" 200 -
+2022-03-03 12:27:52: 127.0.0.1 - - [03/Mar/2022 12:27:52] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:29:06: 127.0.0.1 - - [03/Mar/2022 12:29:06] "GET / HTTP/1.1" 200 -
+2022-03-03 12:29:06: 127.0.0.1 - - [03/Mar/2022 12:29:06] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:29:49: 127.0.0.1 - - [03/Mar/2022 12:29:49] "GET / HTTP/1.1" 200 -
+2022-03-03 12:29:49: 127.0.0.1 - - [03/Mar/2022 12:29:49] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:29:51: handleBrokerLogin appKey dummy
+2022-03-03 12:29:51: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 12:29:51: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 12:29:51: 127.0.0.1 - - [03/Mar/2022 12:29:51] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 12:29:56: 127.0.0.1 - - [03/Mar/2022 12:29:56] "GET / HTTP/1.1" 200 -
+2022-03-03 12:29:56: 127.0.0.1 - - [03/Mar/2022 12:29:56] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:37:14: 127.0.0.1 - - [03/Mar/2022 12:37:14] "GET / HTTP/1.1" 200 -
+2022-03-03 12:37:14: 127.0.0.1 - - [03/Mar/2022 12:37:14] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:37:15: 127.0.0.1 - - [03/Mar/2022 12:37:15] "GET / HTTP/1.1" 200 -
+2022-03-03 12:37:15: 127.0.0.1 - - [03/Mar/2022 12:37:15] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:37:15: 127.0.0.1 - - [03/Mar/2022 12:37:15] "GET / HTTP/1.1" 200 -
+2022-03-03 12:37:15: 127.0.0.1 - - [03/Mar/2022 12:37:15] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:37:16: 127.0.0.1 - - [03/Mar/2022 12:37:16] "GET / HTTP/1.1" 200 -
+2022-03-03 12:37:16: 127.0.0.1 - - [03/Mar/2022 12:37:16] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:39:56: 127.0.0.1 - - [03/Mar/2022 12:39:56] "GET / HTTP/1.1" 200 -
+2022-03-03 12:40:38: 127.0.0.1 - - [03/Mar/2022 12:40:38] "GET / HTTP/1.1" 200 -
+2022-03-03 12:40:38: 127.0.0.1 - - [03/Mar/2022 12:40:38] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:41:07: 127.0.0.1 - - [03/Mar/2022 12:41:07] "GET / HTTP/1.1" 200 -
+2022-03-03 12:41:07: 127.0.0.1 - - [03/Mar/2022 12:41:07] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:41:07: 127.0.0.1 - - [03/Mar/2022 12:41:07] "GET / HTTP/1.1" 200 -
+2022-03-03 12:41:07: 127.0.0.1 - - [03/Mar/2022 12:41:07] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:41:08: 127.0.0.1 - - [03/Mar/2022 12:41:08] "GET / HTTP/1.1" 200 -
+2022-03-03 12:41:08: 127.0.0.1 - - [03/Mar/2022 12:41:08] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:42:13: 127.0.0.1 - - [03/Mar/2022 12:42:13] "GET / HTTP/1.1" 200 -
+2022-03-03 12:42:13: 127.0.0.1 - - [03/Mar/2022 12:42:13] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:42:13: 127.0.0.1 - - [03/Mar/2022 12:42:13] "GET / HTTP/1.1" 200 -
+2022-03-03 12:42:14: 127.0.0.1 - - [03/Mar/2022 12:42:14] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:42:14: 127.0.0.1 - - [03/Mar/2022 12:42:14] "GET / HTTP/1.1" 200 -
+2022-03-03 12:42:14: 127.0.0.1 - - [03/Mar/2022 12:42:14] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:42:14: 127.0.0.1 - - [03/Mar/2022 12:42:14] "GET / HTTP/1.1" 200 -
+2022-03-03 12:42:14: 127.0.0.1 - - [03/Mar/2022 12:42:14] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:21: 127.0.0.1 - - [03/Mar/2022 12:43:21] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:21: 127.0.0.1 - - [03/Mar/2022 12:43:21] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:22: 127.0.0.1 - - [03/Mar/2022 12:43:22] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:23: 127.0.0.1 - - [03/Mar/2022 12:43:23] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:23: 127.0.0.1 - - [03/Mar/2022 12:43:23] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:48: 127.0.0.1 - - [03/Mar/2022 12:43:48] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:48: 127.0.0.1 - - [03/Mar/2022 12:43:48] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:48: 127.0.0.1 - - [03/Mar/2022 12:43:48] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:48: 127.0.0.1 - - [03/Mar/2022 12:43:48] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:48: 127.0.0.1 - - [03/Mar/2022 12:43:48] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:48: 127.0.0.1 - - [03/Mar/2022 12:43:48] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:49: 127.0.0.1 - - [03/Mar/2022 12:43:49] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:49: 127.0.0.1 - - [03/Mar/2022 12:43:49] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:49: 127.0.0.1 - - [03/Mar/2022 12:43:49] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:49: 127.0.0.1 - - [03/Mar/2022 12:43:49] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:43:49: 127.0.0.1 - - [03/Mar/2022 12:43:49] "GET / HTTP/1.1" 200 -
+2022-03-03 12:43:49: 127.0.0.1 - - [03/Mar/2022 12:43:49] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "GET / HTTP/1.1" 200 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "GET / HTTP/1.1" 200 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "GET / HTTP/1.1" 200 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "GET / HTTP/1.1" 200 -
+2022-03-03 12:44:53: 127.0.0.1 - - [03/Mar/2022 12:44:53] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:44:54: 127.0.0.1 - - [03/Mar/2022 12:44:54] "GET / HTTP/1.1" 200 -
+2022-03-03 12:44:54: 127.0.0.1 - - [03/Mar/2022 12:44:54] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:44:54: 127.0.0.1 - - [03/Mar/2022 12:44:54] "GET / HTTP/1.1" 200 -
+2022-03-03 12:44:54: 127.0.0.1 - - [03/Mar/2022 12:44:54] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:45:48: 127.0.0.1 - - [03/Mar/2022 12:45:48] "GET / HTTP/1.1" 200 -
+2022-03-03 12:45:48: 127.0.0.1 - - [03/Mar/2022 12:45:48] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:45:49: 127.0.0.1 - - [03/Mar/2022 12:45:49] "GET / HTTP/1.1" 200 -
+2022-03-03 12:45:49: 127.0.0.1 - - [03/Mar/2022 12:45:49] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:45:49: 127.0.0.1 - - [03/Mar/2022 12:45:49] "GET / HTTP/1.1" 200 -
+2022-03-03 12:45:49: 127.0.0.1 - - [03/Mar/2022 12:45:49] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:46:55: 127.0.0.1 - - [03/Mar/2022 12:46:55] "GET / HTTP/1.1" 200 -
+2022-03-03 12:46:55: 127.0.0.1 - - [03/Mar/2022 12:46:55] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:46:56: 127.0.0.1 - - [03/Mar/2022 12:46:56] "GET / HTTP/1.1" 200 -
+2022-03-03 12:46:56: 127.0.0.1 - - [03/Mar/2022 12:46:56] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:46:56: 127.0.0.1 - - [03/Mar/2022 12:46:56] "GET / HTTP/1.1" 200 -
+2022-03-03 12:46:56: 127.0.0.1 - - [03/Mar/2022 12:46:56] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:46:57: handleBrokerLogin appKey dummy
+2022-03-03 12:46:57: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 12:46:57: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 12:46:57: 127.0.0.1 - - [03/Mar/2022 12:46:57] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 12:47:00: 127.0.0.1 - - [03/Mar/2022 12:47:00] "GET / HTTP/1.1" 200 -
+2022-03-03 12:47:00: 127.0.0.1 - - [03/Mar/2022 12:47:00] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:47:00: 127.0.0.1 - - [03/Mar/2022 12:47:00] "GET / HTTP/1.1" 200 -
+2022-03-03 12:47:00: 127.0.0.1 - - [03/Mar/2022 12:47:00] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:47:00: 127.0.0.1 - - [03/Mar/2022 12:47:00] "GET / HTTP/1.1" 200 -
+2022-03-03 12:47:00: 127.0.0.1 - - [03/Mar/2022 12:47:00] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:47:00: 127.0.0.1 - - [03/Mar/2022 12:47:00] "GET / HTTP/1.1" 200 -
+2022-03-03 12:47:01: 127.0.0.1 - - [03/Mar/2022 12:47:01] "[33mGET /Users/kenishr/Desktop/AlgoTrader/main.css HTTP/1.1[0m" 404 -
+2022-03-03 12:54:03: handleBrokerLogin appKey dummy
+2022-03-03 12:54:03: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 12:54:03: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 12:54:03: 127.0.0.1 - - [03/Mar/2022 12:54:03] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 12:54:21: handleBrokerLogin appKey dummy
+2022-03-03 12:54:21: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 12:54:21: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 12:54:21: 127.0.0.1 - - [03/Mar/2022 12:54:21] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 12:55:29: handleBrokerLogin appKey dummy
+2022-03-03 12:55:29: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 12:55:29: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 12:55:29: 127.0.0.1 - - [03/Mar/2022 12:55:29] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 12:58:32: handleBrokerLogin appKey dummy
+2022-03-03 12:58:32: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 12:58:32: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 12:58:32: 127.0.0.1 - - [03/Mar/2022 12:58:32] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 13:01:57: handleBrokerLogin appKey dummy
+2022-03-03 13:01:57: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 13:01:57: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 13:01:57: 127.0.0.1 - - [03/Mar/2022 13:01:57] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 13:02:09: 127.0.0.1 - - [03/Mar/2022 13:02:09] "GET / HTTP/1.1" 200 -
+2022-03-03 13:02:09: 127.0.0.1 - - [03/Mar/2022 13:02:09] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:02:10: 127.0.0.1 - - [03/Mar/2022 13:02:10] "[33mGET /assets/imgs/spring_design.jpg HTTP/1.1[0m" 404 -
+2022-03-03 13:02:13: handleBrokerLogin appKey dummy
+2022-03-03 13:02:13: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 13:02:13: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 13:02:13: 127.0.0.1 - - [03/Mar/2022 13:02:13] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 13:04:48: 127.0.0.1 - - [03/Mar/2022 13:04:48] "GET / HTTP/1.1" 200 -
+2022-03-03 13:04:49: 127.0.0.1 - - [03/Mar/2022 13:04:49] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:14:49: serverConfig => {'port': 8080, 'enableSSL': False, 'sslPort': 8443, 'deployDir': '/Users/kenishr/Desktop/AlgoTrader', 'logFileDir': '/Users/kenishr/Desktop/AlgoTrader/logs'}
+2022-03-03 13:14:49: brokerAppConfig => {'broker': 'zerodha', 'clientID': 'dummy', 'appKey': 'dummy', 'appSecret': 'dummy', 'redirectUrl': 'http://localhost:8080/apis/broker/login/zerodha'}
+2022-03-03 13:14:49:  * Running on http://localhost:8080/ (Press CTRL+C to quit)
+2022-03-03 13:14:49:  * Restarting with stat
+2022-03-03 13:14:50: serverConfig => {'port': 8080, 'enableSSL': False, 'sslPort': 8443, 'deployDir': '/Users/kenishr/Desktop/AlgoTrader', 'logFileDir': '/Users/kenishr/Desktop/AlgoTrader/logs'}
+2022-03-03 13:14:50: brokerAppConfig => {'broker': 'zerodha', 'clientID': 'dummy', 'appKey': 'dummy', 'appSecret': 'dummy', 'redirectUrl': 'http://localhost:8080/apis/broker/login/zerodha'}
+2022-03-03 13:14:50:  * Debugger is active!
+2022-03-03 13:14:50:  * Debugger PIN: 101-361-078
+2022-03-03 13:14:59: 127.0.0.1 - - [03/Mar/2022 13:14:59] "GET / HTTP/1.1" 200 -
+2022-03-03 13:14:59: 127.0.0.1 - - [03/Mar/2022 13:14:59] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:15:06: 127.0.0.1 - - [03/Mar/2022 13:15:06] "GET / HTTP/1.1" 200 -
+2022-03-03 13:15:06: 127.0.0.1 - - [03/Mar/2022 13:15:06] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:19:09: handleBrokerLogin appKey dummy
+2022-03-03 13:19:09: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 13:19:09: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 13:19:09: 127.0.0.1 - - [03/Mar/2022 13:19:09] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
+2022-03-03 13:20:02: 127.0.0.1 - - [03/Mar/2022 13:20:02] "GET / HTTP/1.1" 200 -
+2022-03-03 13:20:02: 127.0.0.1 - - [03/Mar/2022 13:20:02] "[33mGET /main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:28:33: 127.0.0.1 - - [03/Mar/2022 13:28:33] "GET / HTTP/1.1" 200 -
+2022-03-03 13:28:33: 127.0.0.1 - - [03/Mar/2022 13:28:33] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:28:37: 127.0.0.1 - - [03/Mar/2022 13:28:37] "GET / HTTP/1.1" 200 -
+2022-03-03 13:28:37: 127.0.0.1 - - [03/Mar/2022 13:28:37] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:28:52: 127.0.0.1 - - [03/Mar/2022 13:28:52] "GET / HTTP/1.1" 200 -
+2022-03-03 13:28:52: 127.0.0.1 - - [03/Mar/2022 13:28:52] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:29:07: 127.0.0.1 - - [03/Mar/2022 13:29:07] "GET / HTTP/1.1" 200 -
+2022-03-03 13:29:07: 127.0.0.1 - - [03/Mar/2022 13:29:07] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:29:07: 127.0.0.1 - - [03/Mar/2022 13:29:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "GET / HTTP/1.1" 200 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "GET / HTTP/1.1" 200 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "GET / HTTP/1.1" 200 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "GET / HTTP/1.1" 200 -
+2022-03-03 13:29:09: 127.0.0.1 - - [03/Mar/2022 13:29:09] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:23: 127.0.0.1 - - [03/Mar/2022 13:32:23] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:23: 127.0.0.1 - - [03/Mar/2022 13:32:23] "[33mGET /static/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:50: 127.0.0.1 - - [03/Mar/2022 13:32:50] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:50: 127.0.0.1 - - [03/Mar/2022 13:32:50] "[32mGET /static//src/templates/main.css HTTP/1.1[0m" 308 -
+2022-03-03 13:32:50: 127.0.0.1 - - [03/Mar/2022 13:32:50] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:51: 127.0.0.1 - - [03/Mar/2022 13:32:51] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:52: 127.0.0.1 - - [03/Mar/2022 13:32:52] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:32:52: 127.0.0.1 - - [03/Mar/2022 13:32:52] "GET / HTTP/1.1" 200 -
+2022-03-03 13:32:52: 127.0.0.1 - - [03/Mar/2022 13:32:52] "[33mGET /static/src/templates/main.css HTTP/1.1[0m" 404 -
+2022-03-03 13:33:27: 127.0.0.1 - - [03/Mar/2022 13:33:27] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-03-03 13:33:27: 127.0.0.1 - - [03/Mar/2022 13:33:27] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-03-03 13:33:27: 127.0.0.1 - - [03/Mar/2022 13:33:27] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-03-03 13:33:27: 127.0.0.1 - - [03/Mar/2022 13:33:27] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-03-03 13:33:27: 127.0.0.1 - - [03/Mar/2022 13:33:27] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2022-03-03 13:33:27: 127.0.0.1 - - [03/Mar/2022 13:33:27] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-03-03 13:35:33: 127.0.0.1 - - [03/Mar/2022 13:35:33] "GET / HTTP/1.1" 200 -
+2022-03-03 13:35:33: 127.0.0.1 - - [03/Mar/2022 13:35:33] "GET /static/styles/main.css HTTP/1.1" 200 -
+2022-03-03 13:35:36: handleBrokerLogin appKey dummy
+2022-03-03 13:35:36: ==> ZerodhaLogin .args => ImmutableMultiDict([])
+2022-03-03 13:35:36: Redirecting to zerodha login url = https://kite.trade/connect/login?api_key=dummy&v=3
+2022-03-03 13:35:36: 127.0.0.1 - - [03/Mar/2022 13:35:36] "[32mGET /apis/broker/login/zerodha HTTP/1.1[0m" 302 -
