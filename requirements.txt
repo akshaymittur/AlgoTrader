@@ -22,12 +22,12 @@ pyasn1-modules==0.2.8
 pycparser==2.20
 pyOpenSSL==21.0.0
 python-dateutil==2.8.2
-pywin32==302
+pywin32==302;platform_system == "Windows"
 requests==2.26.0
 service-identity==21.1.0
 six==1.16.0
 Twisted==21.7.0
-twisted-iocpsupport==1.0.2
+twisted-iocpsupport==1.0.2;platform_system == "Windows"
 txaio==21.2.1
 typing-extensions==3.10.0.2
 urllib3==1.26.7
