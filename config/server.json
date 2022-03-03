@@ -1,7 +1,0 @@
-{
-  "port": 8080,
-  "enableSSL": false,
-  "sslPort": 8443,
-  "deployDir": "/Users/kenishr/Desktop/AlgoTrader",
-  "logFileDir": "/Users/kenishr/Desktop/AlgoTrader/logs"
-}
