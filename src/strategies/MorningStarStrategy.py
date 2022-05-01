@@ -13,20 +13,20 @@ from trademgmt.TradeManager import TradeManager
 # Each strategy has to be derived from BaseStrategy
 
 
-class SampleStrategy(BaseStrategy):
+class MorningStarStrategy(BaseStrategy):
     __instance = None
 
     @staticmethod
     def getInstance():  # singleton class
-        if SampleStrategy.__instance == None:
-            SampleStrategy()
-        return SampleStrategy.__instance
+        if MorningStarStrategy.__instance == None:
+            MorningStarStrategy()
+        return MorningStarStrategy.__instance
 
     def __init__(self):
-        if SampleStrategy.__instance != None:
+        if MorningStarStrategy.__instance != None:
             raise Exception("This class is a singleton!")
         else:
-            SampleStrategy.__instance = self
+            MorningStarStrategy.__instance = self
         # Call Base class constructor
         super().__init__("MORNING STAR")
         # Initialize all the properties specific to this strategy
