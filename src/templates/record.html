@@ -1,0 +1,22 @@
+<table border="1">
+    <thead>
+        <tr>
+            <!-- {% for col in colnames %} -->
+            <th>Symbol</th>
+            <th>Quantity</th>
+            <th>Avg. Price</th>
+            <th>P/L</th>
+
+            <!-- {% endfor %} -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            {% for col in colnames %}
+            <td>{{ record[col] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
