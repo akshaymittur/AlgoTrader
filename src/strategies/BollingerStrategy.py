@@ -34,14 +34,21 @@ class BollingerStrategy(BaseStrategy):
         self.productType = ProductType.MIS
         self.driver.get(self.URL)
         soup = BeautifulSoup(self.driver.page_source, 'lxml')
-        self.temp_stock_list = []
+        self.temp_stock_dic = {}
         for stocks in soup.find_all('table', class_='table table-striped scan_results_table dataTable no-footer')[0].tbody.find_all('tr'):
-            self.temp_stock_list.append(stocks.find_all('td')[2].text)
-        self.symbols = list(set(self.temp_stock_list)
+            self.temp_stock_dic[stocks.find_all('td')[2].text] = float(
+                stocks.find_all('td')[4].text[:-1])
+        self.symbols = list(set(self.temp_stock_dic.keys())
                             & set(self.nifty500_list))
 
         self.slPercentage = 2
-        self.targetPercentage = 3
+        self.sum = 0.0
+        for stock in self.symbols:
+            self.sum += self.temp_stock_dict[stock]
+        if len(self.symbols) > 0:
+            self.targetPercentage = float(sum / len(self.symbols))
+        else:
+            self.targetPercentage = 3.0
         # When to start the strategy. Default is Market start time
         self.startTimestamp = Utils.getTimeOfToDay(9, 30, 0)
         # This is not square off timestamp. This is the timestamp after which no new trades will be placed under this strategy but existing trades continue to be active.
