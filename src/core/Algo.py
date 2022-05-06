@@ -13,7 +13,7 @@ from strategies.PerfectSellStrategy import PerfectSellStrategy
 # from strategies.OptionSelling import OptionSelling
 # from strategies.ShortStraddleBNF import ShortStraddleBNF
 
-#from Test import Test
+# from Test import Test
 
 
 class Algo:
