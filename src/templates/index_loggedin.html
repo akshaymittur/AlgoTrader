@@ -5,23 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
   <title>Algo Trading - Python</title>
-  <style>
-    .button {
-      background-color: #53a5b0;
-      border: none;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-    .center {
-      text-align: center;
-    }
-  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
@@ -44,12 +29,15 @@
 </head>
 
 <body>
-  <h1 style="color: blue" class="center">MultiStrategy Algorithmic Trader</h1>
-  <div class="center">
-    <button class="button" onClick="startAlgo()">
-      Start Algo
-    </button>
+  <div class="page-container">
+    <div class="form-body">
+        <header id="showcase">
+            <h1>Multistrategy Algorithmic Trader</h1>
+            <button class="button" onClick="startAlgo()">
+              Start Algo
+            </button>
+        </header>
+    </div>
   </div>
 </body>
-
 </html>
