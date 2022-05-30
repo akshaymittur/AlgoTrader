@@ -9,6 +9,8 @@ from strategies.SampleStrategy import SampleStrategy
 from strategies.MorningStarStrategy import MorningStarStrategy
 from strategies.BollingerStrategy import BollingerStrategy
 from strategies.PerfectSellStrategy import PerfectSellStrategy
+from strategies.SMACrossoverStrategy import SMACrossoverStrategy
+from strategies.EveningStarStrategy import EveningStarStrategy
 # from strategies.BNFORB30Min import BNFORB30Min
 # from strategies.OptionSelling import OptionSelling
 # from strategies.ShortStraddleBNF import ShortStraddleBNF
@@ -40,6 +42,8 @@ class Algo:
         threading.Thread(target=MorningStarStrategy.getInstance().run).start()
         threading.Thread(target=BollingerStrategy.getInstance().run).start()
         threading.Thread(target=PerfectSellStrategy.getInstance().run).start()
+        threading.Thread(target=SMACrossoverStrategy.getInstance().run).start()
+        threading.Thread(target=EveningStarStrategy.getInstance().run).start()
         # threading.Thread(target=BNFORB30Min.getInstance().run).start()
         # threading.Thread(target=OptionSelling.getInstance().run).start()
         # threading.Thread(target=ShortStraddleBNF.getInstance().run).start()
