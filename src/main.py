@@ -4,6 +4,7 @@ from flask import Flask
 
 from config.Config import getBrokerAppConfig, getServerConfig, getSystemConfig
 from restapis.HomeAPI import HomeAPI
+from restapis.testAPI import testAPI
 from restapis.BrokerLoginAPI import BrokerLoginAPI
 from restapis.StartAlgoAPI import StartAlgoAPI
 from restapis.PositionsAPI import PositionsAPI
@@ -19,6 +20,9 @@ app.add_url_rule("/apis/algo/start",
                  view_func=StartAlgoAPI.as_view("start_algo_api"))
 app.add_url_rule("/positions", view_func=PositionsAPI.as_view("positions_api"))
 app.add_url_rule("/holdings", view_func=HoldingsAPI.as_view("holdings_api"))
+
+# test
+app.add_url_rule("/test", view_func=testAPI.as_view("test_api"))
 
 
 def initLoggingConfg(filepath):
