@@ -11,16 +11,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     localStorage.setItem("algoStarted", "no");
+    function onLoading() {
+      document.getElementById("marketclose").style.visibility="hidden";
+    }
     function startAlgo() {
       var url =  "http://localhost:8080" + "/apis/algo/start"
       var data = {};
       $.post(url, {},  
         function(data, status, xhr) {
           if (data.redirect) {
+            document.getElementById("marketclose").style.visibility="hidden";
             localStorage.setItem("algoStarted", "yes");
             window.location.href = data.redirect;
           } else {
-            alert('status: ' + status + ', data: ' + JSON.stringify(data));
+            document.getElementById("btto").style.visibility="hidden";
+            document.getElementById("marketclose").style.visibility="visible";
           }
         },
         'json'
@@ -36,7 +41,7 @@
 
 </head>
 
-<body>
+<body onload="onLoading()">
   <nav class="navbar">
     <div class="navbar-container container">
         <input type="checkbox" name="" id="">
@@ -62,6 +67,7 @@
             <button id="btto" class="button" onClick="startAlgo()">
               Start Algo
             </button>
+            <h4 id="marketclose">Market Closed.</h4>
         </header>
     </div>
   </div>

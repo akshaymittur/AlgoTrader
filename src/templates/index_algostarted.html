@@ -16,28 +16,29 @@
       $.post(url, {},  
         function(data, status, xhr) {
           if (data.redirect) {
+            document.getElementById("marketclose").style.visibility="hidden";
             localStorage.setItem("algoStarted", "yes");
             window.location.href = data.redirect;
-          } else {
-            alert('status: ' + status + ', data: ' + JSON.stringify(data));
+          }
+          else {
+            document.getElementById("btto").style.visibility="hidden";
+            document.getElementById("marketclose").style.visibility="visible";
           }
         },
         'json'
       );
     }
     function algoStarted() {
+      document.getElementById("marketclose").style.visibility="hidden";
       var x = localStorage.getItem("algoStarted");
-      console.log(x)
       if(x == "no") {
           document.getElementById("running").style.visibility="hidden";
-
       }
       else {
         document.getElementById("btto").style.visibility="hidden";
       }
     }
 </script>
-
 </head>
 
 <body onload="algoStarted()">
@@ -66,6 +67,7 @@
                 Start Algo
               </button>
               <h4 id="running">Algo is running...</h4>
+              <h4 id="marketclose">Market Closed.</h4>
             </div>
         </header>
     </div>
