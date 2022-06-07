@@ -20,6 +20,7 @@ incremental==21.3.0
 itsdangerous==2.0.1
 Jinja2==3.0.2
 kiteconnect==3.9.4
+lxml==4.9.0
 MarkupSafe==2.0.1
 numpy==1.22.3
 outcome==1.1.0
