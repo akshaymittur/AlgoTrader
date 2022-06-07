@@ -43,12 +43,11 @@ class SMACrossoverStrategy(BaseStrategy):
 
         self.slPercentage = 2
         self.sum = 0.0
+        self.targetPercentage = 2.0
         for stock in self.symbols:
-            self.sum += self.temp_stock_dict[stock]
+            self.sum += self.temp_stock_dic[stock]
         if len(self.symbols) > 0:
-            self.targetPercentage = float(sum / len(self.symbols))
-        else:
-            self.targetPercentage = 2.0
+            self.targetPercentage = float(self.sum / len(self.symbols))
         # When to start the strategy. Default is Market start time
         self.startTimestamp = Utils.getTimeOfToDay(9, 30, 0)
         # This is not square off timestamp. This is the timestamp after which no new trades will be placed under this strategy but existing trades continue to be active.

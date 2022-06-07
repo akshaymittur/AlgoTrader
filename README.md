@@ -6,8 +6,5 @@ BMSCE Final Year Project
 
 ## To Do:
 
-- Make UI Cleaner
-- Format Output & Add Buttons
-- Add Functionality for ChartInk Screener
-- Create csv File for Storing Day Trades
-- Add Functionality to Set Capital to be Traded
+- Add error message for closed markets
+- Fix Holdings and Positions API

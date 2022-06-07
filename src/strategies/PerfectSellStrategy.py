@@ -2,6 +2,7 @@ import logging
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
+import time
 
 from models.Direction import Direction
 from models.ProductType import ProductType
@@ -29,6 +30,7 @@ class PerfectSellStrategy(BaseStrategy):
             PerfectSellStrategy.__instance = self
         # Call Base class constructor
         super().__init__("PERFECT SELL")
+        time.sleep(10)
         # Initialize all the properties specific to this strategy
         self.URL = 'https://chartink.com/screener/perfect-sell-short'
         self.productType = ProductType.MIS
@@ -43,12 +45,11 @@ class PerfectSellStrategy(BaseStrategy):
 
         self.slPercentage = 2
         self.sum = 0.0
+        self.targetPercentage = 3.0
         for stock in self.symbols:
-            self.sum += self.temp_stock_dict[stock]
+            self.sum += self.temp_stock_dic[stock]
         if len(self.symbols) > 0:
-            self.targetPercentage = float(sum / len(self.symbols))
-        else:
-            self.targetPercentage = 3.0
+            self.targetPercentage = float(self.sum / len(self.symbols))
         # When to start the strategy. Default is Market start time
         self.startTimestamp = Utils.getTimeOfToDay(9, 30, 0)
         # This is not square off timestamp. This is the timestamp after which no new trades will be placed under this strategy but existing trades continue to be active.
