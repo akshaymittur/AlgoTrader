@@ -9,22 +9,38 @@
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    function stopAlgo() {
-      var url =  "http://localhost:8080" + "/apis/algo/stop"
+  <script language="javascript">
+    function startAlgo() {
+      var url =  "http://localhost:8080" + "/apis/algo/start"
       var data = {};
       $.post(url, {},  
         function(data, status, xhr) {
-          alert('status: ' + status + ', data: ' + JSON.stringify(data));
+          if (data.redirect) {
+            localStorage.setItem("algoStarted", "yes");
+            window.location.href = data.redirect;
+          } else {
+            alert('status: ' + status + ', data: ' + JSON.stringify(data));
+          }
         },
         'json'
       );
     }
-  </script>
+    function algoStart() {
+      var x = localStorage.getItem("algoStarted");
+      console.log(x)
+      if(x == "no") {
+          document.getElementById("running").style.visibility="hidden";
+
+      }
+      else {
+        document.getElementById("btto").style.visibility="hidden";
+      }
+    }
+</script>
 
 </head>
 
-<body>
+<body onload="algoStart()">
   <nav class="navbar">
     <div class="navbar-container container">
         <input type="checkbox" name="" id="">
@@ -34,7 +50,7 @@
             <span class="line line3"></span>
         </div>
         <ul class="menu-items">
-            <li><a href="/">Home</a></li>
+            <li><a href="http://localhost:8080?algoStarted=true">Home</a></li>
             <li><a href="/positions">Positions</a></li>
             <li><a href="/holdings">Holdings</a></li>
         </ul>
@@ -45,9 +61,11 @@
     <div class="form-body">
         <header id="showcase">
             <h1 id="multi">Multistrategy Algorithmic Trader</h1>
-            
             <div class="center">
-              <h4>Algo is running...</h4>
+              <button id="btto" class="button" onClick="startAlgo()">
+                Start Algo
+              </button>
+              <h4 id="running">Algo is running...</h4>
             </div>
         </header>
     </div>

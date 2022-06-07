@@ -10,12 +10,14 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+    localStorage.setItem("algoStarted", "no");
     function startAlgo() {
       var url =  "http://localhost:8080" + "/apis/algo/start"
       var data = {};
       $.post(url, {},  
         function(data, status, xhr) {
           if (data.redirect) {
+            localStorage.setItem("algoStarted", "yes");
             window.location.href = data.redirect;
           } else {
             alert('status: ' + status + ', data: ' + JSON.stringify(data));
@@ -44,19 +46,19 @@
             <span class="line line3"></span>
         </div>
         <ul class="menu-items">
-            <li><a href="/">Home</a></li>
+            <li><a href="http://localhost:8080?algoStarted=true">Home</a></li>
             <li><a href="/positions">Positions</a></li>
             <li><a href="/holdings">Holdings</a></li>
         </ul>
         <h1 class="logo">Explore</h1>
     </div>
 </nav>
-</div>
 
   <div class="page-container">
     <div class="form-body">
         <header id="showcase">
             <h1 id="multi">Multistrategy Algorithmic Trader</h1>
+            
             <button id="btto" class="button" onClick="startAlgo()">
               Start Algo
             </button>

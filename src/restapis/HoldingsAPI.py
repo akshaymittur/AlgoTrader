@@ -11,4 +11,4 @@ class HoldingsAPI(MethodView):
         holdings = brokerHandle.holdings()
         logging.info('User holdings => %s', holdings)
         # return json.dumps(holdings)
-        return render_template('record.html', records=holdings['net'], colnames=['tradingsymbol', 'quantity', 'average_price', 'pnl'])
+        return render_template('record.html', records=holdings, colnames=['tradingsymbol', 'quantity', 'average_price', 'pnl'])

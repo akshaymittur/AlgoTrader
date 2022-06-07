@@ -8,7 +8,7 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" >
         <div class="navbar-container container">
             <input type="checkbox" name="" id="">
             <div class="hamburger-lines">
@@ -17,38 +17,44 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="/">Home</a></li>
+                <li><a href="http://localhost:8080?algoStarted=true">Home</a></li>
                 <li><a href="/positions">Positions</a></li>
                 <li><a href="/holdings">Holdings</a></li>
             </ul>
             <h1 class="logo">Explore</h1>
         </div>
     </nav>
-    <div class="table-wrapper">
+        
+    <div class="page-container">
+        <div class="form-body">
+            <header id="showcase">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        
+                        <th>Symbol</th>
+                        <th>Quantity</th>
+                        <th>Avg. Price</th>
+                        <th>P/L</th>
+    
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        {% for col in colnames %}
+                        <td>{{ record[col] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </header>
+    </div>
+    </div>
 
-    <table border="1" class="fl-table">
-    <thead>
-        <tr>
-            <!-- {% for col in colnames %} -->
-            <th>Symbol</th>
-            <th>Quantity</th>
-            <th>Avg. Price</th>
-            <th>P/L</th>
-
-            <!-- {% endfor %} -->
-        </tr>
-    </thead>
-    <tbody>
-        {% for record in records %}
-        <tr>
-            {% for col in colnames %}
-            <td>{{ record[col] }}</td>
-            {% endfor %}
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-</div>
-
+            
+            
+        
 </body>
 </html>
