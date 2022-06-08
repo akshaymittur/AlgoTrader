@@ -81,7 +81,7 @@ class PerfectSellStrategy(BaseStrategy):
             ), symbol, cmp)
 
             direction = 'SHORT'
-            breakoutPrice = 0
+            breakoutPrice = cmp
 
             if direction == None:
                 continue

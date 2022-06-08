@@ -49,6 +49,8 @@ class BaseStrategy:
         s = Service(ChromeDriverManager().install())
         chrome_options = Options()
         chrome_options.add_argument("--headless")
+        # chrome_options.add_experimental_option(
+        #     'excludeSwitches', ['enable-logging'])
         self.driver = webdriver.Chrome(service=s, options=chrome_options)
 
     def getName(self):
@@ -81,7 +83,7 @@ class BaseStrategy:
         return True
 
     def run(self):
-        # NOTE: This should not be overriden in Derived class
+        # : This should not be overriden in Derived class
         if self.enabled == False:
             logging.warn(
                 "%s: Not going to run strategy as its not enabled.", self.getName())

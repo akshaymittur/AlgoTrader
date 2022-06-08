@@ -81,7 +81,7 @@ class BollingerStrategy(BaseStrategy):
             ), symbol, cmp)
 
             direction = 'LONG'
-            breakoutPrice = 0
+            breakoutPrice = cmp
 
             if direction == None:
                 continue

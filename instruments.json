@@ -2030,20 +2030,6 @@
     "exchange": "NSE"
   },
   {
-    "instrument_token": 5616129,
-    "exchange_token": "21938",
-    "tradingsymbol": "445MH22-SG",
-    "name": "",
-    "last_price": 0.0,
-    "expiry": "",
-    "strike": 0.0,
-    "tick_size": 0.01,
-    "lot_size": 100,
-    "instrument_type": "EQ",
-    "segment": "NSE",
-    "exchange": "NSE"
-  },
-  {
     "instrument_token": 242433,
     "exchange_token": "947",
     "tradingsymbol": "448GS2023-GS",
