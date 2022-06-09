@@ -39,11 +39,11 @@ class Algo:
 
         # start running strategies: Run each strategy in a separate thread
         threading.Thread(target=SampleStrategy.getInstance().run).start()
-        # threading.Thread(target=MorningStarStrategy.getInstance().run).start()
-        # threading.Thread(target=BollingerStrategy.getInstance().run).start()
-        # threading.Thread(target=PerfectSellStrategy.getInstance().run).start()
-        # threading.Thread(target=SMACrossoverStrategy.getInstance().run).start()
-        # threading.Thread(target=EveningStarStrategy.getInstance().run).start()
+        threading.Thread(target=MorningStarStrategy.getInstance().run).start()
+        threading.Thread(target=BollingerStrategy.getInstance().run).start()
+        threading.Thread(target=PerfectSellStrategy.getInstance().run).start()
+        threading.Thread(target=SMACrossoverStrategy.getInstance().run).start()
+        threading.Thread(target=EveningStarStrategy.getInstance().run).start()
         # threading.Thread(target=BNFORB30Min.getInstance().run).start()
         # threading.Thread(target=OptionSelling.getInstance().run).start()
         # threading.Thread(target=ShortStraddleBNF.getInstance().run).start()

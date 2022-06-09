@@ -10,5 +10,4 @@ class PositionsAPI(MethodView):
         brokerHandle = Controller.getBrokerLogin().getBrokerHandle()
         positions = brokerHandle.positions()
         logging.info('User positions => %s', positions)
-        # return json.dumps(positions)
-        return render_template('record.html', records=positions, colnames=['tradingsymbol', 'quantity', 'average_price', 'pnl'])
+        return render_template('record.html', records=positions['net'], colnames=['tradingsymbol', 'buy_quantity', 'buy_price', 'pnl'])

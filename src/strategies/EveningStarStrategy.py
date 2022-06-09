@@ -58,7 +58,7 @@ class EveningStarStrategy(BaseStrategy):
         # Capital to trade (This is the margin you allocate from your broker account for this strategy)
         self.capital = 1000
         self.leverage = 2  # 2x, 3x Etc
-        self.maxTradesPerDay = 3  # Max number of trades per day under this strategy
+        self.maxTradesPerDay = 10  # Max number of trades per day under this strategy
         self.isFnO = False  # Does this strategy trade in FnO or not
         # Applicable if isFnO is True (1 set means 1CE/1PE or 2CE/2PE etc based on your strategy logic)
         self.capitalPerSet = 0

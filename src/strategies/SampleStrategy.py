@@ -28,7 +28,8 @@ class SampleStrategy(BaseStrategy):
         super().__init__("SAMPLE")
         # Initialize all the properties specific to this strategy
         self.productType = ProductType.MIS
-        self.symbols = ["SBIN"]
+        self.symbols = ["SBIN", "INFY", "TATASTEEL",
+                        "RELIANCE", "HDFCBANK", "CIPLA"]
         self.slPercentage = 1.1
         self.targetPercentage = 2.2
         # When to start the strategy. Default is Market start time
@@ -40,7 +41,7 @@ class SampleStrategy(BaseStrategy):
         # Capital to trade (This is the margin you allocate from your broker account for this strategy)
         self.capital = 1000
         self.leverage = 2  # 2x, 3x Etc
-        self.maxTradesPerDay = 3000  # Max number of trades per day under this strategy
+        self.maxTradesPerDay = 1  # Max number of trades per day under this strategy
         self.isFnO = False  # Does this strategy trade in FnO or not
         # Applicable if isFnO is True (1 set means 1CE/1PE or 2CE/2PE etc based on your strategy logic)
         self.capitalPerSet = 0
@@ -111,7 +112,6 @@ class SampleStrategy(BaseStrategy):
         trade.intradaySquareOffTimestamp = Utils.getEpoch(
             self.squareOffTimestamp)
         # Hand over the trade to TradeManager
-        print(trade)
         TradeManager.addNewTrade(trade)
 
     def shouldPlaceTrade(self, trade, tick):

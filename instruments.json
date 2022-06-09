@@ -32900,20 +32900,6 @@
     "exchange": "NSE"
   },
   {
-    "instrument_token": 2422785,
-    "exchange_token": "9464",
-    "tradingsymbol": "ESSEN-RE-BE",
-    "name": "INTEGRA ESSENTIA",
-    "last_price": 0.0,
-    "expiry": "",
-    "strike": 0.0,
-    "tick_size": 0.05,
-    "lot_size": 1,
-    "instrument_type": "EQ",
-    "segment": "NSE",
-    "exchange": "NSE"
-  },
-  {
     "instrument_token": 6211841,
     "exchange_token": "24265",
     "tradingsymbol": "ESTER",
@@ -47252,8 +47238,8 @@
   {
     "instrument_token": 1076225,
     "exchange_token": "4204",
-    "tradingsymbol": "MOTHERSUMI",
-    "name": "MOTHERSON SUMI SYSTEMS LT",
+    "tradingsymbol": "MOTHERSON",
+    "name": "SAMVRDHNA MTHRSN INTL",
     "last_price": 0.0,
     "expiry": "",
     "strike": 0.0,
