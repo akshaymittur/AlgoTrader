@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Algo Trading - Python</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+</head>
+<body>
+    <nav class="navbar" >
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="http://localhost:8080?algoStarted=true">Home</a></li>
+                <li><a href="/positions">Positions</a></li>
+                <li><a href="/holdings">Holdings</a></li>
+            </ul>
+            <h1 class="logo">Explore</h1>
+        </div>
+    </nav>
+        
+    <div class="page-container">
+        <div class="form-body">
+            <header id="showcase">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        
+                        <th>Symbol</th>
+                        <th>Quantity</th>
+                        <th>Avg. Price</th>
+                        <th>P/L</th>
+    
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                    <tr>
+                        {% for col in colnames %}
+                        <td>{{ record[col] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </header>
+    </div>
+    </div>
+
+            
+            
+        
+</body>
+</html>

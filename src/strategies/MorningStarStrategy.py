@@ -1,4 +1,7 @@
 import logging
+from bs4 import BeautifulSoup
+import pandas as pd
+import requests
 
 from models.Direction import Direction
 from models.ProductType import ProductType
@@ -10,28 +13,41 @@ from trademgmt.TradeManager import TradeManager
 # Each strategy has to be derived from BaseStrategy
 
 
-class SampleStrategy(BaseStrategy):
+class MorningStarStrategy(BaseStrategy):
     __instance = None
 
     @staticmethod
     def getInstance():  # singleton class
-        if SampleStrategy.__instance == None:
-            SampleStrategy()
-        return SampleStrategy.__instance
+        if MorningStarStrategy.__instance == None:
+            MorningStarStrategy()
+        return MorningStarStrategy.__instance
 
     def __init__(self):
-        if SampleStrategy.__instance != None:
+        if MorningStarStrategy.__instance != None:
             raise Exception("This class is a singleton!")
         else:
-            SampleStrategy.__instance = self
+            MorningStarStrategy.__instance = self
         # Call Base class constructor
-        super().__init__("SAMPLE")
+        super().__init__("MORNING STAR")
         # Initialize all the properties specific to this strategy
+        self.URL = 'https://chartink.com/screener/morning-star-candlestick-pattern'
         self.productType = ProductType.MIS
-        self.symbols = ["SBIN", "INFY", "TATASTEEL",
-                        "RELIANCE", "HDFCBANK", "CIPLA"]
-        self.slPercentage = 1.1
-        self.targetPercentage = 2.2
+        self.driver.get(self.URL)
+        soup = BeautifulSoup(self.driver.page_source, 'lxml')
+        self.temp_stock_dic = {}
+        for stocks in soup.find_all('table', class_='table table-striped scan_results_table dataTable no-footer')[0].tbody.find_all('tr'):
+            self.temp_stock_dic[stocks.find_all('td')[2].text] = float(
+                stocks.find_all('td')[4].text[:-1])
+        self.symbols = list(set(self.temp_stock_dic.keys())
+                            & set(self.nifty500_list))
+
+        self.slPercentage = 2
+        self.sum = 0.0
+        self.targetPercentage = 2.0
+        for stock in self.symbols:
+            self.sum += self.temp_stock_dic[stock]
+        if len(self.symbols) > 0:
+            self.targetPercentage = float(self.sum / len(self.symbols))
         # When to start the strategy. Default is Market start time
         self.startTimestamp = Utils.getTimeOfToDay(9, 30, 0)
         # This is not square off timestamp. This is the timestamp after which no new trades will be placed under this strategy but existing trades continue to be active.
@@ -41,7 +57,7 @@ class SampleStrategy(BaseStrategy):
         # Capital to trade (This is the margin you allocate from your broker account for this strategy)
         self.capital = 1000
         self.leverage = 2  # 2x, 3x Etc
-        self.maxTradesPerDay = 1  # Max number of trades per day under this strategy
+        self.maxTradesPerDay = 10  # Max number of trades per day under this strategy
         self.isFnO = False  # Does this strategy trade in FnO or not
         # Applicable if isFnO is True (1 set means 1CE/1PE or 2CE/2PE etc based on your strategy logic)
         self.capitalPerSet = 0
@@ -49,31 +65,22 @@ class SampleStrategy(BaseStrategy):
     def process(self):
         if len(self.trades) >= self.maxTradesPerDay:
             return
-        # This is a sample strategy with the following logic:
-        # 1. If current market price > 0.5% from previous day close then create LONG trade
-        # 2. If current market price < 0.5% from previous day close then create SHORT trade
+        # This is a strategy with the following logic:
+        # 1. Bullish reversal pattern in which a stock which had a long white body a 2 days ago,  then opened lower with a Doji a day ago and finally closed above the previous day
         for symbol in self.symbols:
             quote = self.getQuote(symbol)
             if quote == None:
                 logging.error('%s: Could not get quote for %s',
                               self.getName(), symbol)
                 continue
-            longBreakoutPrice = Utils.roundToNSEPrice(
-                quote.close + quote.close * 0.5 / 100)
-            shortBreakoutPrice = Utils.roundToNSEPrice(
-                quote.close - quote.close * 0.5 / 100)
-            cmp = quote.lastTradedPrice
-            logging.info('%s: %s => long = %f, short = %f, CMP = %f', self.getName(
-            ), symbol, longBreakoutPrice, shortBreakoutPrice, cmp)
 
-            direction = None
-            breakoutPrice = 0
-            if cmp > longBreakoutPrice:
-                direction = 'LONG'
-                breakoutPrice = longBreakoutPrice
-            elif cmp < shortBreakoutPrice:
-                direction = 'SHORT'
-                breakoutPrice = shortBreakoutPrice
+            cmp = quote.lastTradedPrice
+            logging.info('%s: %s => CMP = %f', self.getName(
+            ), symbol, cmp)
+
+            direction = 'LONG'
+            breakoutPrice = cmp
+
             if direction == None:
                 continue
 

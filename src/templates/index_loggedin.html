@@ -5,51 +5,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
   <title>Algo Trading - Python</title>
-  <style>
-    .button {
-      background-color: #53a5b0;
-      border: none;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-    .center {
-      text-align: center;
-    }
-  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+    localStorage.setItem("algoStarted", "no");
+    function onLoading() {
+      document.getElementById("marketclose").style.visibility="hidden";
+    }
     function startAlgo() {
       var url =  "http://localhost:8080" + "/apis/algo/start"
       var data = {};
       $.post(url, {},  
         function(data, status, xhr) {
           if (data.redirect) {
+            document.getElementById("marketclose").style.visibility="hidden";
+            localStorage.setItem("algoStarted", "yes");
             window.location.href = data.redirect;
           } else {
-            alert('status: ' + status + ', data: ' + JSON.stringify(data));
+            document.getElementById("btto").style.visibility="hidden";
+            document.getElementById("marketclose").style.visibility="visible";
           }
         },
         'json'
       );
     }
   </script>
+  <style>
+    #multi {
+      text-align: center;
+      margin-top: -10%;
+    }
+  </style>
 
 </head>
 
-<body>
-  <h1 style="color: blue" class="center">Welcome to algo trading in python</h1>
-  <div class="center">
-    <button class="button" onClick="startAlgo()">
-      Start Algo
-    </button>
+<body onload="onLoading()">
+  <nav class="navbar">
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="http://localhost:8080?algoStarted=true">Home</a></li>
+            <li><a href="/positions">Positions</a></li>
+            <li><a href="/holdings">Holdings</a></li>
+        </ul>
+        <h1 class="logo">Explore</h1>
+    </div>
+</nav>
+
+  <div class="page-container">
+    <div class="form-body">
+        <header id="showcase">
+            <h1 id="multi">Multistrategy Algorithmic Trader</h1>
+            
+            <button id="btto" class="button" onClick="startAlgo()">
+              Start Algo
+            </button>
+            <h4 id="marketclose">Market Closed.</h4>
+        </header>
+    </div>
   </div>
 </body>
-
 </html>
